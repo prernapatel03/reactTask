@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// function parseJwt(token) {
+//     const base64Url = token.split('.')[1];
+//     const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+//     const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+//     return JSON.parse(jsonPayload);
+// }
+
+// // Example usage:
+// const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+// const decodedPayload = parseJwt(token);
+// console.log(token);
+
+let token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc1B1YmxpYyI6dHJ1ZSwic3VydmV5SWQiOiIxOTc2IiwiaXNEYXNoYm9hcmQiOnRydWUsImV4cCI6MTcyMDg2Mzk5OSwiaWF0IjoxNzIwNzc3NTk5fQ.4wcLuWqBJjEaKvGCi2FqssO8P-k3RyyazN4v2qbd-es";
+
+  var encodeURL = encodeURIComponent(token).replace(/\./g, "%2E");
+  console.log("encodeUrl>>>>>>>", encodeURL)
+  localStorage.setItem('encodeURL' , encodeURL)
+  
+  const decodeUrl = decodeURIComponent(token);
+  console.log("decodedUrl>>>>>>>",decodeUrl);
+  localStorage.setItem('decodeUrl' , decodeUrl)
+  
+  token = encodeURL;
+  localStorage.setItem('token' , token)
+
+</script>
+</html>

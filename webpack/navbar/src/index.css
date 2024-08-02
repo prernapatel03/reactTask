@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  font-size: 3rem;
+  margin: auto;
+  /* max-width: 800px; */
+  /* margin-top: 20px; */
+  /* justify-content: stretch; */
+}
+/* .css-cveggr-MuiListItemIcon-root {
+   background-color: red;
+   min-width: 34px
+} */
